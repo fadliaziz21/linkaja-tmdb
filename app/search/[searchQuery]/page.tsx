@@ -21,7 +21,7 @@ export default function MovieSearch(params: any) {
     return (
         <>
             <div className="relative p-8">
-                <h1 className="mb-5 text-2xl text-white"><b>Your movies search result</b></h1>
+                <h1 className="mb-5 text-2xl text-white"><b>Your movies search result for {moviesQuery}</b></h1>
                 <h1 className="mb-10 text-white">Found {movieListData?.total_results} result</h1>
                     {
                         movieListData.total_results === 0
