@@ -20,7 +20,7 @@ export default function Filter(props: any) {
             <select value={value} onChange={(e) => setValue(e.target.value) } className="w-500 me-5 p-2 rounded-md outline-none flex-1">
                 {
                     year.map( (item: any, index: number) => (
-                        <option key={index} selected value={item.year}>{item.year}</option>
+                        <option key={index} value={item.year}>{item.year}</option>
                     ))
                 }
             </select>
