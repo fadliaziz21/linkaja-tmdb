@@ -1,22 +1,24 @@
-"use client"
+"use client";
 
-import { searchMovies } from "@/api/movies.search.api";
+import { searchFilterMovies } from "@/api/movies.search.api";
 import Card from "@/components/card/Card";
 import Filter from "@/components/filter/Filter";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-export default function MovieSearch(params: any) {
+export default function MovieSearchFilter(params: any) {
     const moviesQuery = params.params.searchQuery;
+    const filterQuery = params.params.searchFilter;
+
     const [movieListData, setMovieListData] = useState<any>({});
 
     useEffect(() => {
-        if(moviesQuery) {
-            searchMovies(moviesQuery).then((response) => {
+        if(moviesQuery && filterQuery) {
+            searchFilterMovies(moviesQuery, filterQuery).then((response) => {
                 setMovieListData(response);
             });
         }
-    }, [moviesQuery]);
+    }, [moviesQuery, filterQuery]);
 
     return (
         <>
