@@ -7,6 +7,7 @@ export default async function Home() {
     return (
         <>
             <div className="relative p-8">
+                <h1 className="mb-5 text-2xl text-white"><b>Top 20 rated movies</b></h1>
                 <div className="grid grid-cols-8 gap-5">
                     {
                         data.results.map( (item: any, index: number) => (
