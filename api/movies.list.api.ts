@@ -7,7 +7,7 @@ export const fetchMoviesByTopRated = async () => {
     if (!res.ok) {
         throw new Error('Failed to fetch data')
     }
-    const responseBody = res.json();
+    const responseBody = await res.json();
     return responseBody;
 
 }
