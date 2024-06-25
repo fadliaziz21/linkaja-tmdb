@@ -1,6 +1,6 @@
-import { IMG_PREV_URL } from '@/constants/env'
-import Link from 'next/link'
-import React from 'react'
+import { IMG_PREV_URL } from "@/constants/env";
+import Link from "next/link";
+import React from "react";
 
 export default function Card(props: any) {
     return (
@@ -11,10 +11,11 @@ export default function Card(props: any) {
                         <img src={IMG_PREV_URL + props.data.poster_path} />
                     </div>
                     <div className="my-2 flex items-center justify-between">
-                        <b className="block font-sans text-sm font-medium text-white leading-relaxed">
+                        <b className="block font-sans text-md font-medium text-white leading-relaxed">
                             {props.data.title}
                         </b>
                     </div>
+                    <p className="text-white text-xs">{props.data.release_date.split('-')[0]}</p>
                 </div>
             </Link> 
         </>
