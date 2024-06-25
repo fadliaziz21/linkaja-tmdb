@@ -1,8 +1,8 @@
 "use client";
 
-import { getMoviesDetail } from '@/api/movies.detail.api';
-import { IMG_ORI_URL, IMG_PREV_URL } from '@/constants/env';
-import { useEffect, useState } from 'react';
+import { getMoviesDetail } from "@/api/movies.detail.api";
+import { IMG_ORI_URL, IMG_PREV_URL } from "@/constants/env";
+import { useEffect, useState } from "react";
 
 export default function MoviesDetail(params: any) {
     const moviesId = params.params.id;
